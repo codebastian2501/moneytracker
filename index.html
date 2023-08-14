@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <!-- ie = income expense -->
+      <div id="ie-form-container">
+        <input
+          type="text"
+          placeholder="description"
+          class="description-field"
+        />
+        <input type="text" class="amount-field" />
+        <button class="save-test">Test</button>
+        <button id="save-ie">Save</button>
+      </div>
+
+      <div class="create-group-form">
+        <input type="text" placeholder="name" class="group-name" />
+        <input
+          type="text"
+          placeholder="initial investment"
+          class="group-initialInvestment"
+        />
+      </div>
+
+      <hr />
+
+      <div class="container"></div>
+      <button class="create-field-button">Create field</button>
+      <button class="save-fields-button">Save</button>
+    </div>
+
+    <hr />
+    <button class="save-group-button">Save group</button>
+
+    <div class="groups-container"></div>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
