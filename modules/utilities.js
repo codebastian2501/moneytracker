@@ -31,4 +31,22 @@ function updateItemsBalance(group) {
   });
 }
 
-export { updateGroupBalance, updateItemBalance, updateItemsBalance };
+function getDate() {
+  // Get the current date
+  const currentDate = new Date();
+
+  // Extract day, month, and year
+  const day = currentDate.getDate();
+  const month = currentDate.getMonth() + 1; // Months are zero-based, so we add 1
+  const year = currentDate.getFullYear();
+
+  // Format the date as "dd/mm/yyyy"
+  // const formattedDate = `${day.toString().padStart(2, "0")}/${month
+  //   .toString()
+  //   .padStart(2, "0")}/${year}`;
+  return `${day.toString().padStart(2, "0")}/${month
+    .toString()
+    .padStart(2, "0")}/${year}`;
+}
+
+export { updateGroupBalance, updateItemBalance, updateItemsBalance, getDate };

@@ -1,3 +1,49 @@
 #ie-form-container {
   display: block;
 }
+
+.group-balance {
+  margin-bottom: 10px;
+}
+
+.item-name {
+  font-size: 1.2rem;
+  color: blue;
+}
+
+.item-expenses-title,
+.item-incomes-title {
+  font-weight: bold;
+}
+
+.add-item-income-button,
+.add-item-expense-button,
+.delete-income-button,
+.delete-expense-button,
+.edit-income-button,
+.edit-expense-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 3px 6px;
+}
+
+.add-item-income-button,
+.add-item-expense-button {
+  padding: 5px 10px;
+}
+
+/* */
+
+body {
+  color: #fff;
+}
+
+.group-container {
+  background: #292424;
+}
+
+.button {
+  padding: 5px 10px;
+  background: red;
+}
