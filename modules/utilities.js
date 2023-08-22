@@ -49,4 +49,9 @@ function getDate() {
     .padStart(2, "0")}/${year}`;
 }
 
+function saveForm(form) {
+  let stringForm = JSON.stringify(form);
+  window.localStorage.setItem("form", stringForm);
+}
+// https://www.raymondcamden.com/2022/03/27/saving-form-data-in-client-side-storage
 export { updateGroupBalance, updateItemBalance, updateItemsBalance, getDate };
