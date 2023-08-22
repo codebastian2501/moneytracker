@@ -4,6 +4,63 @@ let createFieldButton = document.querySelector(".create-field-button"),
   saveFieldsButton = document.querySelector(".save-fields-button");
 let container = document.querySelector(".container");
 
+// const addGroupIncome = document.querySelector(".add-group-income"),
+//   addGroupExpense = document.querySelector(".add-group-expense");
+
+function createDynamicField() {
+  const incomesFieldsContainer = document.querySelector(
+      ".incomes-fields-container"
+    ),
+    expensesFieldsContainer = document.querySelector(
+      ".expenses-fields-container"
+    ),
+    saveTest = document.querySelector(".save-test-2");
+
+  const addGroupIncome = document.querySelector(".add-group-income"),
+    addGroupExpense = document.querySelector(".add-group-expense");
+
+  let fields = {
+    incomes: {},
+    expenses: {},
+  };
+
+  addGroupIncome.addEventListener("click", function () {
+    let uniqueId = generateUniqueId();
+    let incomeFieldContainer = document.createElement("div");
+    let incomeField = document.createElement("input");
+
+    let deleteIncomeField = document.createElement("button");
+    deleteIncomeField.textContent = "Delete field";
+    deleteIncomeField.addEventListener("click", function () {
+      incomesFieldsContainer.removeChild(incomeFieldContainer);
+      delete fields.incomes[uniqueId];
+      console.log(fields.incomes);
+    });
+
+    incomeFieldContainer.appendChild(incomeField);
+    incomeFieldContainer.appendChild(deleteIncomeField);
+
+    incomesFieldsContainer.appendChild(incomeFieldContainer);
+
+    incomeField.addEventListener("change", function () {
+      fields.incomes[uniqueId] = this.value;
+    });
+
+    fields.incomes[uniqueId] = {
+      uniqueId,
+      value: incomeField.value,
+    };
+    console.log(fields.incomes);
+  });
+
+  saveTest.addEventListener("click", function () {
+    console.log(fields.incomes);
+  });
+  console.log(saveTest);
+}
+
+createDynamicField();
+
 let fields = [];
 let data = {};
 

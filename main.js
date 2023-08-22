@@ -27,6 +27,10 @@ let saveFieldsButton = document.querySelector(".save-fields-button");
 let ieFormContainer = document.querySelector("#ie-form-container"),
   saveIeButton = document.querySelector("#save-ie");
 
+  /* test - if not used, delete later */
+const addGroupIncome = document.querySelector(".add-group-income"),
+  addGroupExpense = document.querySelector(".add-group-expense");
+
 // const groups = [];
 let groups = [];
 
